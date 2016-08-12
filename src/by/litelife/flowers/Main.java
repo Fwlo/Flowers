@@ -15,6 +15,7 @@ public class Main {
 
     public static void main(String[] args) {
         LOG.debug("test");
+        LOG.debug("new commit");
         Creator creator = new Creator();
         creator.addTOBouquet();
         creator.bouquet1.sortShoppingFlowers();
