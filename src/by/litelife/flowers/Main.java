@@ -14,6 +14,7 @@ public class Main {
     private static Logger LOG = Logger.getLogger(Main.class);
 
     public static void main(String[] args) {
+        LOG.debug("test");
         Creator creator = new Creator();
         creator.addTOBouquet();
         creator.bouquet1.sortShoppingFlowers();
