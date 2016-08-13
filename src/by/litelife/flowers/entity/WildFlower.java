@@ -3,7 +3,7 @@ package by.litelife.flowers.entity;
 /**
  * Created by Иван on 08.08.2016.
  */
-public class WildFlowers extends AbstractFlower {
+public class WildFlower extends AbstractFlower {
     private String soil;
 
     @Override
@@ -20,7 +20,7 @@ public class WildFlowers extends AbstractFlower {
         this.soil = soil;
     }
 
-    public WildFlowers(String color, String name, String soil) {
+    public WildFlower(String color, String name, String soil) {
         super(color, name);
         this.soil = soil;
     }
