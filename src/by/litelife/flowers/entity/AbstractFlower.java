@@ -24,7 +24,6 @@ abstract public class AbstractFlower {
     }
 
     public AbstractFlower(String color, String name) {
-
         this.color = color;
         this.name = name;
     }

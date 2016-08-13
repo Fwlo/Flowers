@@ -4,9 +4,6 @@ import by.litelife.flowers.actions.FindFlowers;
 import by.litelife.flowers.actions.SortFlowers;
 import by.litelife.flowers.creator.Creator;
 import by.litelife.flowers.entity.ShoppingFlower;
-import by.litelife.flowers.exceptions.FreshnessException;
-import by.litelife.flowers.exceptions.PriceException;
-import by.litelife.flowers.exceptions.StemLengthException;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
@@ -16,24 +13,10 @@ import java.util.ArrayList;
  */
 public class Report {
     private static Logger LOG = Logger.getLogger(Report.class);
-
-
     private Creator creator = new Creator();
 
     public void createBouquet(){
-        try {
-            creator.addTOBouquet();
-        } catch (StemLengthException e) {
-            LOG.error("Stem length some flower less 0! Change the stem length.");
-            System.exit(0);
-        } catch (FreshnessException e) {
-            LOG.error("Freshness some flower less 0 or more 100! Change the freshness.");
-            System.exit(0);
-        } catch (PriceException e) {
-            LOG.error("Price some flower or accessory less 0! Change the price.");
-            System.exit(0);
-        }
-
+        creator.addTOBouquet();
     }
 
     public void showBouquet(){

@@ -1,8 +1,6 @@
 package by.litelife.flowers.entity;
 
-import by.litelife.flowers.exceptions.FreshnessException;
-import by.litelife.flowers.exceptions.PriceException;
-import by.litelife.flowers.exceptions.StemLengthException;
+import by.litelife.flowers.exceptions.FlowerException;
 
 /**
  * Created by Иван on 08.08.2016.
@@ -12,18 +10,24 @@ public class ShoppingFlower extends AbstractFlower {
     private int price;
     private int freshness;
 
-    public ShoppingFlower(String color, String name, int stemLength, int price, int freshness) throws StemLengthException, FreshnessException, PriceException {
+    public ShoppingFlower(String color, String name, int stemLength, int price, int freshness) throws FlowerException {
         super(color,name);
 
-        if (stemLength<0) throw new StemLengthException();
+        if (stemLength<0) {
+            throw new FlowerException("Stem length flower less 0! Change the stem length.");
+        }
 
         this.stemLength = stemLength;
 
-        if (price<0) throw new PriceException();
+        if (price<0) {
+            throw new FlowerException("Price flower less 0! Change the price.");
+        }
 
         this.price = price;
 
-        if (freshness<0 || freshness>100) throw new FreshnessException();
+        if (freshness<0 || freshness>100) {
+            throw new FlowerException("Freshness flower less 0 or more 100! Change the freshness.");
+        }
 
         this.freshness = freshness;
     }
@@ -32,8 +36,10 @@ public class ShoppingFlower extends AbstractFlower {
         return stemLength;
     }
 
-    public void setStemLength(int stemLength) throws StemLengthException {
-        if (stemLength<0) throw new StemLengthException();
+    public void setStemLength(int stemLength) throws FlowerException {
+        if (stemLength<0) {
+            throw new FlowerException("Stem length flower less 0! Change the stem length.");
+        }
 
         this.stemLength = stemLength;
     }
@@ -42,8 +48,10 @@ public class ShoppingFlower extends AbstractFlower {
         return price;
     }
 
-    public void setPrice(int price) throws PriceException {
-        if (price<0) throw new PriceException();
+    public void setPrice(int price) throws FlowerException {
+        if (price<0) {
+            throw new FlowerException("Price flower less 0! Change the price.");
+        }
 
         this.price = price;
     }
@@ -52,8 +60,10 @@ public class ShoppingFlower extends AbstractFlower {
         return freshness;
     }
 
-    public void setFreshness(int freshness) throws FreshnessException {
-        if (freshness<0 || freshness>100) throw new FreshnessException();
+    public void setFreshness(int freshness) throws FlowerException {
+        if (freshness<0 || freshness>100) {
+            throw new FlowerException("Freshness flower less 0 or more 100! Change the freshness.");
+        }
         this.freshness = freshness;
     }
 

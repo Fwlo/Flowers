@@ -21,7 +21,6 @@ public class WildFlowers extends AbstractFlower {
     }
 
     public WildFlowers(String color, String name, String soil) {
-
         super(color, name);
         this.soil = soil;
     }
