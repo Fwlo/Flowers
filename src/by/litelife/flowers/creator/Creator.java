@@ -18,13 +18,13 @@ public class Creator {
 
 
     public void addTOBouquet()  {
+
         try {
             ShoppingFlower rose = new ShoppingFlower("Red", "Rose", 9, 22, 70);
             bouquet1.addToBouquetShoppingFlower(rose);
         } catch (FlowerException e){
             LOG.error(e.getMessage());
         }
-
         try {
             ShoppingFlower tulip = new ShoppingFlower("yellow", "Tulip", 35, 13, 60);
             bouquet1.addToBouquetShoppingFlower(tulip);
@@ -68,5 +68,6 @@ public class Creator {
         } catch (AccessoryException e){
             LOG.error(e.getMessage());
         }
+
     }
 }

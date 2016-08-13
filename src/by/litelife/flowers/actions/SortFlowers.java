@@ -1,6 +1,7 @@
 package by.litelife.flowers.actions;
 
 import by.litelife.flowers.entity.ShoppingFlower;
+import by.litelife.flowers.exceptions.BouquetException;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,7 +11,10 @@ import java.util.Collections;
  */
 public class SortFlowers {
 
-    public ArrayList<ShoppingFlower> sortFlowersByFreshness(ArrayList<ShoppingFlower> bouquet){
+    public ArrayList<ShoppingFlower> sortFlowersByFreshness(ArrayList<ShoppingFlower> bouquet) throws BouquetException {
+        if (bouquet.isEmpty()) {
+            throw new BouquetException("Bouquet is empty!");
+        }
         Collections.sort(bouquet,new ComparatorForSortFlowers());
         return bouquet;
     }
