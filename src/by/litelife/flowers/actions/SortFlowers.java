@@ -1,6 +1,6 @@
-package by.litelife.flowers.actions.sort;
+package by.litelife.flowers.actions;
 
-import by.litelife.flowers.entity.flower.ShoppingFlower;
+import by.litelife.flowers.entity.ShoppingFlower;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,7 +11,7 @@ import java.util.Collections;
 public class SortFlowers {
 
     public ArrayList<ShoppingFlower> sortFlowersByFreshness(ArrayList<ShoppingFlower> bouquet){
-        Collections.sort(bouquet,new ComporatorForSortFlowers());
+        Collections.sort(bouquet,new ComparatorForSortFlowers());
         return bouquet;
     }
 }

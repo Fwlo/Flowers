@@ -1,13 +1,13 @@
-package by.litelife.flowers.entity.accessories;
+package by.litelife.flowers.entity;
 
 
 
-public class Accessories {
+public class Accessory {
     private String name;
     private int price;
     private String color;
 
-    public Accessories(String name, int price, String color) {
+    public Accessory(String name, int price, String color) {
         this.name = name;
         this.price = price;
         this.color = color;
@@ -39,7 +39,7 @@ public class Accessories {
 
     @Override
     public String toString() {
-        return "Accessories{ " +
+        return "Accessory{ " +
                 "name = " + name + " price = " + price +
                 " color = " + color +
                 " }";

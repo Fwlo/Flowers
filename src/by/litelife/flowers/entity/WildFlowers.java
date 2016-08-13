@@ -1,4 +1,4 @@
-package by.litelife.flowers.entity.flower;
+package by.litelife.flowers.entity;
 
 /**
  * Created by Иван on 08.08.2016.
